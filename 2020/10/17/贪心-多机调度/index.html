@@ -20,30 +20,32 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="愿这生生的时光不再枯萎,待花开之时再醉一回">
-<meta property="og:type" content="website">
-<meta property="og:title" content="destiny">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="贪心算法:多机调度问题.题目描述:某工厂有n个独立的作业，由m台相同的机器进行加工处理。作业i所需的加工时间为ti，任何作业在被处理时不能中断，也不能进行拆分处理。现厂长请你给他写一个程序：算出n个作业由m台机器加工处理的最短时间 问题解决：1.从大到小排序，从最大到次大，依次放入解决。12345678910111213141516171819202122232425262728293031323">
+<meta property="og:type" content="article">
+<meta property="og:title" content="贪心-多机调度">
+<meta property="og:url" content="http://example.com/2020/10/17/%E8%B4%AA%E5%BF%83-%E5%A4%9A%E6%9C%BA%E8%B0%83%E5%BA%A6/index.html">
 <meta property="og:site_name" content="destiny">
-<meta property="og:description" content="愿这生生的时光不再枯萎,待花开之时再醉一回">
+<meta property="og:description" content="贪心算法:多机调度问题.题目描述:某工厂有n个独立的作业，由m台相同的机器进行加工处理。作业i所需的加工时间为ti，任何作业在被处理时不能中断，也不能进行拆分处理。现厂长请你给他写一个程序：算出n个作业由m台机器加工处理的最短时间 问题解决：1.从大到小排序，从最大到次大，依次放入解决。12345678910111213141516171819202122232425262728293031323">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-10-17T00:51:41.000Z">
+<meta property="article:modified_time" content="2020-10-17T01:07:01.591Z">
 <meta property="article:author" content="cherry">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2020/10/17/%E8%B4%AA%E5%BF%83-%E5%A4%9A%E6%9C%BA%E8%B0%83%E5%BA%A6/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>destiny</title>
+  <title>贪心-多机调度 | destiny</title>
   
 
 
@@ -141,9 +143,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -159,10 +162,9 @@
       <meta itemprop="name" content="destiny">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/10/17/%E8%B4%AA%E5%BF%83-%E5%A4%9A%E6%9C%BA%E8%B0%83%E5%BA%A6/" class="post-title-link" itemprop="url">贪心-多机调度</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          贪心-多机调度
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -186,7 +188,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="贪心算法-多机调度问题"><a href="#贪心算法-多机调度问题" class="headerlink" title="贪心算法:多机调度问题."></a><strong><code>贪心算法:多机调度问题.</code></strong></h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述:"></a><strong>题目描述:</strong></h2><p><em>某工厂有n个独立的作业，由m台相同的机器进行加工处理。作业i所需的加工时间为ti，任何作业在被处理时不能中断，也不能进行拆分处理。现厂长请你给他写一个程序：算出n个作业由m台机器加工处理的最短时间</em></p>
+        <h1 id="贪心算法-多机调度问题"><a href="#贪心算法-多机调度问题" class="headerlink" title="贪心算法:多机调度问题."></a><strong><code>贪心算法:多机调度问题.</code></strong></h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述:"></a><strong>题目描述:</strong></h2><p><em>某工厂有n个独立的作业，由m台相同的机器进行加工处理。作业i所需的加工时间为ti，任何作业在被处理时不能中断，也不能进行拆分处理。现厂长请你给他写一个程序：算出n个作业由m台机器加工处理的最短时间</em></p>
 <h2 id="问题解决："><a href="#问题解决：" class="headerlink" title="问题解决："></a>问题解决：</h2><h3 id="1-从大到小排序，从最大到次大，依次放入解决。"><a href="#1-从大到小排序，从最大到次大，依次放入解决。" class="headerlink" title="1.从大到小排序，从最大到次大，依次放入解决。"></a>1.从大到小排序，从最大到次大，依次放入解决。</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> speed[<span class="number">10010</span>];<span class="comment">//作业时间 </span></span><br><span class="line"><span class="keyword">int</span> mintime[<span class="number">101</span>];<span class="comment">//存放添加作业后完成的时间 </span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span> &amp;x, <span class="keyword">const</span> <span class="keyword">int</span> &amp;y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> x &gt; y;<span class="comment">//比较函数，求较大值 </span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> t;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;t;</span><br><span class="line">	<span class="keyword">while</span>(t--)</span><br><span class="line">	&#123;</span><br><span class="line">       <span class="keyword">int</span> m ,n;</span><br><span class="line">		<span class="built_in">memset</span>(speed,<span class="number">0</span>,<span class="keyword">sizeof</span>(speed));<span class="comment">//将函数清空 </span></span><br><span class="line">		<span class="built_in">memset</span>(mintime,<span class="number">0</span>,<span class="keyword">sizeof</span>(mintime));</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">			<span class="built_in">cin</span>&gt;&gt;speed[i];</span><br><span class="line">		&#125;</span><br><span class="line">		sort(speed,speed + n,cmp);<span class="comment">//对speed数组进行降序排序 </span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; n;++i)</span><br><span class="line">		&#123;</span><br><span class="line">			*min_element(mintime,mintime +m)+=speed[i];</span><br><span class="line">			<span class="comment">//m是机器数，依次对m台机器添中最小的加speed </span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;*max_element(mintime,mintime +m)&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">		<span class="comment">//求mintime数组中的最大值（所有作业都已完成的时间） </span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>其中提到的min_element()和max_element()函数的用法，请查看[ <a target="_blank" rel="noopener" href="https://blog.csdn.net/Imagirl1/article/details/82346148]">https://blog.csdn.net/Imagirl1/article/details/82346148]</a></p>
@@ -203,81 +205,30 @@
 <h4 id="⑥全部代码"><a href="#⑥全部代码" class="headerlink" title="⑥全部代码"></a>⑥全部代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Job</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> ID;</span><br><span class="line">	<span class="keyword">int</span> time;</span><br><span class="line">&#125;Job;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">JobNode</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> ID;</span><br><span class="line">	<span class="keyword">int</span> time;</span><br><span class="line">	JobNode *next;</span><br><span class="line">&#125;JobNode, *pJobNode;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Header</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> s;</span><br><span class="line">	pJobNode next;</span><br><span class="line">&#125;Header, pHeader;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">SelectMin</span><span class="params">(Header *M, <span class="keyword">int</span> m)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> k = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;m; i++)</span><br><span class="line">		<span class="keyword">if</span>(M[i].s &lt; M[k].s)</span><br><span class="line">			k = i;</span><br><span class="line">	<span class="keyword">return</span> k;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">SelectMax</span><span class="params">(Header *M, <span class="keyword">int</span> m)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> k = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;m; i++)</span><br><span class="line">		<span class="keyword">if</span>(M[i].s &gt; M[k].s)</span><br><span class="line">			k = i;</span><br><span class="line">	<span class="keyword">return</span> k;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Sort</span><span class="params">(Job *a, <span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">	Job temp;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++)</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=i+<span class="number">1</span>; j&lt;n; j++)</span><br><span class="line">			<span class="keyword">if</span>(a[i].time &lt; a[j].time)&#123;</span><br><span class="line">				temp = a[i];</span><br><span class="line">				a[i] = a[j];</span><br><span class="line">				a[j] = temp;</span><br><span class="line">			&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Print</span><span class="params">(Header *M, <span class="keyword">int</span> m)</span></span>&#123;</span><br><span class="line">	JobNode *p;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;m; i++)&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;第&quot;</span>&lt;&lt;i+<span class="number">1</span>&lt;&lt;<span class="string">&quot;台机器运行的作业ID为：&quot;</span>; </span><br><span class="line">		p = M[i].next;</span><br><span class="line">		<span class="keyword">while</span>(p)&#123;</span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;p-&gt;ID&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">			p = p-&gt;next;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Dispatch</span><span class="params">(Job *a, Header *M, <span class="keyword">int</span> n, <span class="keyword">int</span> m)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> min, max;</span><br><span class="line">	JobNode *p, *q;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++)&#123;</span><br><span class="line">		M[i].s = <span class="number">0</span>; M[i].next = <span class="literal">NULL</span>; </span><br><span class="line">	&#125; </span><br><span class="line">	Sort(a, n);</span><br><span class="line">	<span class="keyword">if</span>(n &lt;= m)</span><br><span class="line">		<span class="keyword">return</span> a[<span class="number">0</span>].time;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;n; j++)&#123;</span><br><span class="line">		q = (pJobNode)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(JobNode));</span><br><span class="line">		min = SelectMin(M, m);</span><br><span class="line">		M[min].s += a[j].time;</span><br><span class="line">		q-&gt;ID = a[j].ID;</span><br><span class="line">		q-&gt;time = a[j].time;</span><br><span class="line">		q-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">		<span class="keyword">if</span>(!M[min].next)</span><br><span class="line">			M[min].next = q;</span><br><span class="line">		<span class="keyword">else</span>&#123;</span><br><span class="line">			p = M[min].next;</span><br><span class="line">			<span class="keyword">while</span>(p-&gt;next)</span><br><span class="line">				p = p-&gt;next;</span><br><span class="line">			p-&gt;next = q;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	Print(M, m);</span><br><span class="line">	max = SelectMax(M, m);</span><br><span class="line">	<span class="keyword">return</span> M[max].s;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n, m, maxtime;</span><br><span class="line">	Job a[<span class="number">10</span>];</span><br><span class="line">	Header M[<span class="number">10</span>];</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;输入作业数和机器数：&quot;</span>; </span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;输入作业ID和时间：&quot;</span>&lt;&lt;<span class="built_in">endl</span>; </span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++)&#123;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;a[i].ID&gt;&gt;a[i].time;</span><br><span class="line">	&#125;</span><br><span class="line">	maxtime = Dispatch(a, M, n, m);</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;作业全部运行完成所需最短时间为：&quot;</span>&lt;&lt;maxtime&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">7 3</span></span><br><span class="line"><span class="comment">1 2</span></span><br><span class="line"><span class="comment">2 14</span></span><br><span class="line"><span class="comment">3 4</span></span><br><span class="line"><span class="comment">4 16</span></span><br><span class="line"><span class="comment">5 6</span></span><br><span class="line"><span class="comment">6 5</span></span><br><span class="line"><span class="comment">7 3</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
 
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/10/15/my-first-blog/">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="cherry">
-      <meta itemprop="description" content="愿这生生的时光不再枯萎,待花开之时再醉一回">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="destiny">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/10/15/my-first-blog/" class="post-title-link" itemprop="url">my first blog</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-10-15 17:58:26 / 修改时间：18:12:22" itemprop="dateCreated datePublished" datetime="2020-10-15T17:58:26+08:00">2020-10-15</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>第一章<br>内容</p>
-<p>第二章<br>内容</p>
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/10/15/my-first-blog/" rel="prev" title="my first blog">
+      <i class="fa fa-chevron-left"></i> my first blog
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -330,6 +281,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95-%E5%A4%9A%E6%9C%BA%E8%B0%83%E5%BA%A6%E9%97%AE%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">贪心算法:多机调度问题.</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">题目描述:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%EF%BC%9A"><span class="nav-number">1.2.</span> <span class="nav-text">问题解决：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%BB%8E%E5%A4%A7%E5%88%B0%E5%B0%8F%E6%8E%92%E5%BA%8F%EF%BC%8C%E4%BB%8E%E6%9C%80%E5%A4%A7%E5%88%B0%E6%AC%A1%E5%A4%A7%EF%BC%8C%E4%BE%9D%E6%AC%A1%E6%94%BE%E5%85%A5%E8%A7%A3%E5%86%B3%E3%80%82"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.从大到小排序，从最大到次大，依次放入解决。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E4%BD%9C%E4%B8%9A%E6%97%B6%E9%97%B4%E4%BB%8E%E5%A4%A7%E5%88%B0%E5%B0%8F%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F%E3%80%82"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.作业时间从大到小进行排序。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%84%B6%E5%90%8E%E5%86%8D%E8%80%83%E8%99%91%E6%9C%BA%E5%99%A8%E6%95%B0%E9%87%8F%EF%BC%9A"><span class="nav-number">1.2.3.</span> <span class="nav-text">然后再考虑机器数量：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E5%A6%82%E6%9E%9C%E6%9C%BA%E5%99%A8%E6%95%B0%E9%87%8F%E5%A4%A7%E4%BA%8E%E7%AD%89%E4%BA%8E%E4%BD%9C%E4%B8%9A%E6%95%B0%EF%BC%8C%E9%82%A3%E4%B9%88%E7%9B%B4%E6%8E%A5%E5%90%8C%E6%97%B6%E8%BF%90%E8%A1%8C%E6%89%80%E6%9C%89%E4%BD%9C%E4%B8%9A%EF%BC%8C%E5%85%B6%E8%BF%90%E8%A1%8C%E8%87%B3%E5%B0%91%E6%89%80%E9%9C%80%E7%9A%84%E6%97%B6%E9%97%B4%E5%B0%B1%E4%B8%BA%E6%89%80%E6%9C%89%E4%BD%9C%E4%B8%9A%E4%B8%AD%E6%9C%80%E5%A4%A7%E6%97%B6%E9%97%B4%E7%9A%84%E9%82%A3%E4%B8%AA%E4%BD%9C%E4%B8%9A%E7%9A%84%E6%97%B6%E9%97%B4%E3%80%82"><span class="nav-number">1.2.4.</span> <span class="nav-text">（1）如果机器数量大于等于作业数，那么直接同时运行所有作业，其运行至少所需的时间就为所有作业中最大时间的那个作业的时间。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%882%EF%BC%89%E5%A6%82%E6%9E%9C%E6%9C%BA%E5%99%A8%E6%95%B0%E5%B0%8F%E4%BA%8E%E4%BD%9C%E4%B8%9A%E6%95%B0%EF%BC%8C%E5%88%99%E4%BD%9C%E4%B8%9A%E6%97%B6%E9%97%B4%E6%9C%80%E5%B0%91%E6%88%96%E8%80%85%E7%A9%BA%E9%97%B2%E7%9A%84%E6%9C%BA%E5%99%A8%E4%BC%98%E5%85%88%E5%AE%89%E6%8E%92%E4%BD%9C%E4%B8%9A%E3%80%82"><span class="nav-number">1.2.5.</span> <span class="nav-text">（2）如果机器数小于作业数，则作业时间最少或者空闲的机器优先安排作业。</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%91%A0%E6%89%80%E9%9C%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="nav-number">1.2.5.1.</span> <span class="nav-text">①所需数据结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%91%A1%E6%8E%92%E5%BA%8F%E5%87%BD%E6%95%B0Sort-%EF%BC%9A"><span class="nav-number">1.2.5.2.</span> <span class="nav-text">②排序函数Sort()：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%91%A2%E9%80%89%E6%8B%A9%E6%9C%80%E5%B0%8F%E5%80%BC%E5%87%BD%E6%95%B0SelectMin-%EF%BC%9A"><span class="nav-number">1.2.5.3.</span> <span class="nav-text">③选择最小值函数SelectMin()：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%91%A3%E9%80%89%E6%8B%A9%E6%9C%80%E5%A4%A7%E5%80%BC%E5%87%BD%E6%95%B0SelectMax-%EF%BC%9A"><span class="nav-number">1.2.5.4.</span> <span class="nav-text">④选择最大值函数SelectMax()：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%91%A4%E4%BD%9C%E4%B8%9A%E8%B0%83%E5%BA%A6%E5%87%BD%E6%95%B0Dispatch-%EF%BC%9A"><span class="nav-number">1.2.5.5.</span> <span class="nav-text">⑤作业调度函数Dispatch()：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%91%A5%E5%85%A8%E9%83%A8%E4%BB%A3%E7%A0%81"><span class="nav-number">1.2.5.6.</span> <span class="nav-text">⑥全部代码</span></a></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
